@@ -1,0 +1,143 @@
+{
+  "site": {
+    "ownerName": "ชื่อ นามสกุล",
+    "brandSubtitle": "Creative Portfolio",
+    "heroEyebrow": "Portfolio 2026",
+    "lead": "นักสร้างสรรค์งานภาพและสื่อดิจิทัล ที่สนใจงานเล่าเรื่องผ่านภาพ วิดีโอ และประสบการณ์บนหน้าจอ",
+    "about": "รวมผลงานด้านโปรดักชัน วิดีโอ ภาพนิ่ง และดิจิทัลดีไซน์ โดยเน้นการสื่อสารที่ชัดเจน จังหวะภาพที่ดี และงานภาพที่มี mood ตรงกับเรื่องราวของแต่ละโปรเจกต์",
+    "roles": [
+      "Video Editor",
+      "Filmmaker",
+      "UX/UI",
+      "Motion"
+    ],
+    "portraitCaption": "Available for internship / freelance",
+    "footerQuote": "Believe you can and you are halfway there."
+  },
+  "stats": [
+    {
+      "number": "12+",
+      "label": "Selected Works"
+    },
+    {
+      "number": "5",
+      "label": "Core Skills"
+    },
+    {
+      "number": "2026",
+      "label": "Portfolio Update"
+    }
+  ],
+  "sections": {
+    "worksTitle": "ผลงานเด่น",
+    "worksIntro": "รวมผลงานที่คัดมาให้เห็นทั้งแนวคิด บทบาทในโปรเจกต์ และทักษะที่ใช้ในการทำงานจริง",
+    "galleryTitle": "ภาพนิ่งและเบื้องหลัง",
+    "galleryIntro": "พื้นที่สำหรับรวมภาพกองถ่าย ภาพนิ่ง งานรับปริญญา งานอีเวนต์ หรือ gallery จากโปรเจกต์ต่าง ๆ",
+    "skillsTitle": "ทักษะหลัก",
+    "contactTitle": "ติดต่อ"
+  },
+  "works": [
+    {
+      "image": "assets/project-editorial.png",
+      "kicker": "YouTube Editing",
+      "title": "Editorial Cut / Online Content",
+      "description": "งานตัดต่อคอนเทนต์ออนไลน์ จังหวะสนุก กระชับ และวาง narrative ให้คนดูตามเรื่องได้ง่าย",
+      "tags": [
+        "Premiere Pro",
+        "Storytelling",
+        "Sound Design"
+      ],
+      "url": ""
+    },
+    {
+      "image": "assets/project-film.png",
+      "kicker": "Short Film",
+      "title": "หนังสั้น / MV",
+      "description": "งานกำกับ เขียนบท ถ่ายทำ หรือตัดต่อ สำหรับโปรเจกต์ภาพยนตร์สั้นและมิวสิกวิดีโอ",
+      "tags": [
+        "Directing",
+        "DOP",
+        "Editing"
+      ],
+      "url": ""
+    },
+    {
+      "image": "assets/project-brand.png",
+      "kicker": "Brand Story",
+      "title": "Commercial / Brand Video",
+      "description": "คอนเทนต์แนะนำแบรนด์หรือแคมเปญที่เน้นภาพชัด จังหวะดี และ mood สอดคล้องกับตัวตนของงาน",
+      "tags": [
+        "Production",
+        "Color",
+        "Campaign"
+      ],
+      "url": ""
+    },
+    {
+      "image": "assets/project-motion.png",
+      "kicker": "Motion",
+      "title": "Motion Graphic / Title",
+      "description": "งานกราฟิกเคลื่อนไหว ไตเติล อินโทร หรือ visual package สำหรับวิดีโอและสื่อดิจิทัล",
+      "tags": [
+        "After Effects",
+        "Typography",
+        "Visual System"
+      ],
+      "url": ""
+    }
+  ],
+  "gallery": [
+    {
+      "image": "assets/project-bts.png",
+      "alt": "เบื้องหลังการทำงาน 1"
+    },
+    {
+      "image": "assets/project-photo.png",
+      "alt": "ภาพนิ่ง 1"
+    },
+    {
+      "image": "assets/project-brand.png",
+      "alt": "ภาพนิ่ง 2"
+    },
+    {
+      "image": "assets/project-film.png",
+      "alt": "เบื้องหลังการทำงาน 2"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Production",
+      "description": "วางแผนงาน ถ่ายทำ กำกับภาพ คุม mood และจัดการไฟล์สำหรับส่งต่อ post-production"
+    },
+    {
+      "title": "Post-Production",
+      "description": "ตัดต่อ เล่าเรื่องด้วยจังหวะภาพ ปรับสี ทำเสียงเบื้องต้น และ motion graphic"
+    },
+    {
+      "title": "Digital Experience",
+      "description": "ออกแบบหน้าจอ จัดลำดับข้อมูล และทำเว็บ portfolio ที่อ่านง่ายบนมือถือและเดสก์ท็อป"
+    }
+  ],
+  "contacts": [
+    {
+      "label": "Email",
+      "value": "your.email@example.com",
+      "href": "mailto:your.email@example.com"
+    },
+    {
+      "label": "Phone",
+      "value": "000-000-0000",
+      "href": "tel:0000000000"
+    },
+    {
+      "label": "Instagram",
+      "value": "@yourhandle",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "your-profile",
+      "href": "https://www.linkedin.com/"
+    }
+  ]
+}

@@ -6,6 +6,8 @@ const sections = navLinks
   .filter(Boolean);
 
 const storageKey = "portfolioEditorData";
+const dataFile = "portfolio-data.json";
+const editModeEnabled = location.protocol === "file:" || new URLSearchParams(location.search).has("edit");
 const editLauncher = document.querySelector(".edit-launcher");
 const editor = document.querySelector(".portfolio-editor");
 const editorPanel = document.querySelector(".editor-panel");
@@ -93,11 +95,22 @@ const defaultPortfolioData = {
   })),
 };
 
-let portfolioData = mergeData(defaultPortfolioData, loadSavedData());
+let publishedPortfolioData = {};
+let portfolioData = mergeData(defaultPortfolioData, {});
 
 function loadSavedData() {
   try {
     return JSON.parse(localStorage.getItem(storageKey)) || {};
+  } catch {
+    return {};
+  }
+}
+
+async function loadPublishedData() {
+  try {
+    const response = await fetch(dataFile, { cache: "no-store" });
+    if (!response.ok) return {};
+    return await response.json();
   } catch {
     return {};
   }
@@ -373,6 +386,7 @@ function buildEditor() {
 }
 
 function openEditor() {
+  if (!editModeEnabled) return;
   buildEditor();
   editor.classList.add("open");
   editor.setAttribute("aria-hidden", "false");
@@ -436,7 +450,7 @@ editorPanel.addEventListener("click", (event) => {
   if (action === "export") exportData();
   if (action === "reset" && window.confirm("ล้างข้อมูลที่บันทึกไว้ และกลับไปใช้ข้อความตั้งต้น?")) {
     localStorage.removeItem(storageKey);
-    portfolioData = mergeData(defaultPortfolioData, {});
+    portfolioData = mergeData(defaultPortfolioData, publishedPortfolioData);
     renderPortfolio();
     buildEditor();
   }
@@ -444,10 +458,23 @@ editorPanel.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && editor.classList.contains("open")) closeEditor();
-  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "e") {
+  if (editModeEnabled && (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "e") {
     event.preventDefault();
     editor.classList.contains("open") ? closeEditor() : openEditor();
   }
 });
 
-renderPortfolio();
+async function initializePortfolio() {
+  if (!editModeEnabled) {
+    editLauncher.hidden = true;
+  }
+
+  publishedPortfolioData = await loadPublishedData();
+  portfolioData = mergeData(
+    mergeData(defaultPortfolioData, publishedPortfolioData),
+    editModeEnabled ? loadSavedData() : {}
+  );
+  renderPortfolio();
+}
+
+initializePortfolio();
