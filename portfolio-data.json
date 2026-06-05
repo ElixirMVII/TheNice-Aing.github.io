@@ -52,6 +52,8 @@
         "Shooting",
         "Editing",
         "YouTube"
+        "Camera",
+        "Assistant director"
       ],
       "links": [
         {
@@ -85,7 +87,8 @@
       "tags": [
         "Content",
         "Camera",
-        "Editing"
+        "Editing",
+        "Assistant director"
       ],
       "links": [
         {
@@ -130,7 +133,9 @@
       "tags": [
         "TikTok",
         "Short-form",
-        "Editing"
+        "Editing",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -171,7 +176,9 @@
       "tags": [
         "Reels",
         "Social Video",
-        "Content"
+        "Content",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -204,7 +211,9 @@
       "tags": [
         "YouTube",
         "Production",
-        "Post-Production"
+        "Post-Production",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -248,7 +257,9 @@
         "Short Film",
         "MV",
         "Directing",
-        "Editing"
+        "Editing",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {

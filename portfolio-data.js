@@ -51,7 +51,9 @@ window.PORTFOLIO_DATA = {
       "tags": [
         "Shooting",
         "Editing",
-        "YouTube"
+        "YouTube",
+        "Camera",
+        "Assistant director"
       ],
       "links": [
         {
@@ -85,7 +87,8 @@ window.PORTFOLIO_DATA = {
       "tags": [
         "Content",
         "Camera",
-        "Editing"
+        "Editing",
+        "Assistant director"
       ],
       "links": [
         {
@@ -130,7 +133,9 @@ window.PORTFOLIO_DATA = {
       "tags": [
         "TikTok",
         "Short-form",
-        "Editing"
+        "Editing",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -171,7 +176,9 @@ window.PORTFOLIO_DATA = {
       "tags": [
         "Reels",
         "Social Video",
-        "Content"
+        "Content",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -204,7 +211,9 @@ window.PORTFOLIO_DATA = {
       "tags": [
         "YouTube",
         "Production",
-        "Post-Production"
+        "Post-Production",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
@@ -248,7 +257,9 @@ window.PORTFOLIO_DATA = {
         "Short Film",
         "MV",
         "Directing",
-        "Editing"
+        "Editing",
+         "Camera",
+      "Assistant director"
       ],
       "links": [
         {
