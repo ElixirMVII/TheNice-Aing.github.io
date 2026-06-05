@@ -28,10 +28,12 @@
     </button>
 
     <nav class="site-nav" id="site-nav" aria-label="เมนูหลัก">
-      <a href="#about">About</a>
-      <a href="#works">Works</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
+      <a href="#works">ถ่ายและตัดต่อ</a>
+      <a href="#short-mv">หนังสั้น/MV</a>
+      <a href="#photo">ภาพนิ่ง</a>
+      <a href="#bts">เบื้องหลังการทำงาน</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -50,12 +52,6 @@
             และงานภาพที่มี mood ตรงกับเรื่องราวของแต่ละโปรเจกต์
           </p>
 
-          <div class="role-strip" aria-label="บทบาท">
-            <span>Video Editor</span>
-            <span>Filmmaker</span>
-            <span>UX/UI</span>
-            <span>Motion</span>
-          </div>
 
           <div class="intro-actions">
             <a class="button primary" href="#works">ดูผลงาน</a>
@@ -64,7 +60,7 @@
         </div>
 
         <figure class="portrait-frame">
-          <img src="assets/profile.png" alt="ภาพโปรไฟล์เจ้าของผลงาน">
+          <img src="assets/profile.jpg" alt="ภาพโปรไฟล์เจ้าของผลงาน">
           <figcaption>Available for internship / freelance</figcaption>
         </figure>
       </div>
@@ -82,6 +78,28 @@
       <div>
         <strong>2026</strong>
         <span>Portfolio Update</span>
+      </div>
+    </section>
+
+    <section class="section-pad" id="skills">
+      <div class="section-heading compact">
+        <p class="eyebrow">Tools & Skills</p>
+        <h2>ทักษะหลัก</h2>
+      </div>
+
+      <div class="skill-layout">
+        <div class="skill-panel">
+          <h3>Production</h3>
+          <p>วางแผนงาน ถ่ายทำ กำกับภาพ คุม mood และจัดการไฟล์สำหรับส่งต่อ post-production</p>
+        </div>
+        <div class="skill-panel">
+          <h3>Post-Production</h3>
+          <p>ตัดต่อ เล่าเรื่องด้วยจังหวะภาพ ปรับสี ทำเสียงเบื้องต้น และ motion graphic</p>
+        </div>
+        <div class="skill-panel">
+          <h3>Digital Experience</h3>
+          <p>ออกแบบหน้าจอ จัดลำดับข้อมูล และทำเว็บ portfolio ที่อ่านง่ายบนมือถือและเดสก์ท็อป</p>
+        </div>
       </div>
     </section>
 
@@ -151,40 +169,53 @@
       </div>
     </section>
 
-    <section class="section-pad muted-section" id="gallery">
+    <section class="section-pad muted-section" id="short-mv">
       <div class="section-heading">
-        <p class="eyebrow">Behind The Scene</p>
-        <h2>ภาพนิ่งและเบื้องหลัง</h2>
-        <p>พื้นที่สำหรับรวมภาพกองถ่าย ภาพนิ่ง งานรับปริญญา งานอีเวนต์ หรือ gallery จากโปรเจกต์ต่าง ๆ</p>
+        <p class="eyebrow">Short Film / MV</p>
+        <h2>หนังสั้น / MV</h2>
+        <p>รวมผลงานหนังสั้นและมิวสิกวิดีโอที่เกี่ยวข้องกับการกำกับ ถ่ายทำ และตัดต่อ</p>
       </div>
 
-      <div class="gallery-grid">
-        <img src="assets/project-bts.png" alt="เบื้องหลังการทำงาน 1">
-        <img src="assets/project-photo.png" alt="ภาพนิ่ง 1">
-        <img src="assets/project-brand.png" alt="ภาพนิ่ง 2">
-        <img src="assets/project-film.png" alt="เบื้องหลังการทำงาน 2">
+      <div class="short-mv-grid work-grid">
+        <article class="work-card">
+          <img src="assets/project-film.png" alt="ภาพตัวอย่างงานหนังสั้น">
+          <div class="work-info">
+            <p class="work-kicker">Short Film / MV</p>
+            <h3>หนังสั้น / MV</h3>
+            <p>ผลงานหนังสั้นและมิวสิกวิดีโอ</p>
+            <div class="tag-row">
+              <span>Directing</span>
+              <span>DOP</span>
+              <span>Editing</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section-pad" id="skills">
-      <div class="section-heading compact">
-        <p class="eyebrow">Tools & Skills</p>
-        <h2>ทักษะหลัก</h2>
+    <section class="section-pad" id="photo">
+      <div class="section-heading">
+        <p class="eyebrow">Photography</p>
+        <h2>ภาพนิ่ง</h2>
+      </div>
+      <div class="photo-gallery" id="photo-gallery"></div>
+    </section>
+
+    <section class="section-pad muted-section" id="bts">
+      <div class="section-heading">
+        <p class="eyebrow">Behind The Scene</p>
+        <h2>เบื้องหลังการทำงาน</h2>
+        <p>รวมภาพเบื้องหลังการทำงานจากกองถ่ายและโปรดักชันต่าง ๆ</p>
       </div>
 
-      <div class="skill-layout">
-        <div class="skill-panel">
-          <h3>Production</h3>
-          <p>วางแผนงาน ถ่ายทำ กำกับภาพ คุม mood และจัดการไฟล์สำหรับส่งต่อ post-production</p>
-        </div>
-        <div class="skill-panel">
-          <h3>Post-Production</h3>
-          <p>ตัดต่อ เล่าเรื่องด้วยจังหวะภาพ ปรับสี ทำเสียงเบื้องต้น และ motion graphic</p>
-        </div>
-        <div class="skill-panel">
-          <h3>Digital Experience</h3>
-          <p>ออกแบบหน้าจอ จัดลำดับข้อมูล และทำเว็บ portfolio ที่อ่านง่ายบนมือถือและเดสก์ท็อป</p>
-        </div>
+      <div class="bts-grid work-grid">
+        <article class="work-card">
+          <div class="work-info">
+            <p class="work-kicker">Behind The Scene</p>
+            <h3>เบื้องหลังการทำงาน</h3>
+            <p>รวมภาพเบื้องหลังการทำงาน</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -241,19 +272,20 @@
       </div>
 
       <p class="editor-note">
-        กรอกข้อมูลแล้วหน้าเว็บจะอัปเดตทันที กดบันทึกเพื่อเก็บข้อมูลไว้ใน browser เครื่องนี้
+        กรอกเพื่อ preview ได้ทันที กดบันทึกเพื่อเก็บ draft ในเครื่อง แล้วดาวน์โหลด portfolio-data.json เพื่ออัปโหลดขึ้น GitHub
       </p>
 
       <div class="editor-fields" id="editor-fields"></div>
 
       <div class="editor-actions">
-        <button class="button primary" type="submit">บันทึก</button>
-        <button class="button secondary" type="button" data-editor-action="export">Export JSON</button>
+        <button class="button primary" type="submit">บันทึก Draft</button>
+        <button class="button secondary" type="button" data-editor-action="export">ดาวน์โหลด JSON</button>
         <button class="button secondary" type="button" data-editor-action="reset">ล้างข้อมูล</button>
       </div>
     </form>
   </aside>
 
+  <script src="portfolio-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

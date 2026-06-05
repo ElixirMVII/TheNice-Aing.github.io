@@ -319,6 +319,35 @@ h3 {
   object-fit: cover;
 }
 
+.profile-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid rgba(229, 9, 20, 0.35);
+  background: #070707;
+}
+
+.profile-thumb {
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #050505;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.profile-thumb.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.25);
+}
+
 .portrait-frame figcaption {
   padding: 12px 16px;
   border-top: 1px solid rgba(229, 9, 20, 0.55);
@@ -476,16 +505,17 @@ h3 {
 
 .skill-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
 .skill-panel {
-  min-height: 186px;
-  padding: 24px;
+  min-height: 210px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+  text-align: center;
 }
 
 .skill-panel h3 {
@@ -495,6 +525,24 @@ h3 {
 .skill-panel p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.skill-logo {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+.skill-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact-section {
@@ -719,10 +767,10 @@ h3 {
 }
 
 .work-link {
-  display: none;
-  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 38px;
-  margin-top: 18px;
   padding: 8px 12px;
   border: 1px solid rgba(229, 9, 20, 0.65);
   border-radius: 6px;
@@ -730,11 +778,23 @@ h3 {
   font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
-.work-link.is-visible {
-  display: inline-flex;
-  align-items: center;
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.work-links:empty {
+  display: none;
+}
+
+.resource-grid .work-card,
+.bts-grid .work-card {
+  min-height: 100%;
 }
 
 @media (max-width: 940px) {
@@ -744,9 +804,12 @@ h3 {
   }
 
   .intro-grid,
-  .work-card.featured,
-  .skill-layout {
+  .work-card.featured {
     grid-template-columns: 1fr;
+  }
+
+  .skill-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .work-card.featured {
@@ -846,6 +909,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .skill-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .work-card img {
     min-height: 210px;
   }
@@ -871,5 +938,475 @@ h3 {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* ─── YouTube Video Section ────────────────────────────────────────────────── */
+
+.yt-show-block {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.yt-show-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.yt-show-desc {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.yt-thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.yt-thumb-card {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 180ms ease;
+}
+
+.yt-thumb-card:hover {
+  transform: translateY(-3px);
+}
+
+.yt-thumb-card:hover .yt-play-icon svg path:first-child {
+  fill: rgba(229, 9, 20, 1);
+}
+
+.yt-thumb-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111;
+}
+
+.yt-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.yt-thumb-card:hover .yt-thumb-wrap img {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+.yt-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.yt-play-icon svg {
+  width: 54px;
+  height: 38px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+  transition: transform 180ms ease;
+}
+
+.yt-thumb-card:hover .yt-play-icon svg {
+  transform: scale(1.08);
+}
+
+.yt-thumb-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--fg);
+  padding: 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── YouTube Modal ─────────────────────────────────────────────────────────── */
+
+.yt-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt-modal.open {
+  display: flex;
+}
+
+.yt-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.yt-modal-box {
+  position: relative;
+  z-index: 1;
+  width: min(860px, 94vw);
+  background: #0a0a0a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+}
+
+.yt-modal-close {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  transition: background 150ms ease;
+}
+
+.yt-modal-close:hover {
+  background: rgba(229, 9, 20, 0.85);
+}
+
+.yt-modal-iframe-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.yt-modal-iframe-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .yt-thumb-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .yt-show-block {
+    padding: 18px 14px;
+  }
+}
+
+/* ─── Social Link Cards (TikTok / Instagram / Facebook) ──────────────────── */
+
+.social-thumb-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.social-thumb-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.social-thumb-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-platform-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.social-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 8px;
+  opacity: 0.6;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.social-thumb-card:hover .social-platform-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.social-thumb-card:hover .social-play-overlay {
+  opacity: 1;
+}
+
+.social-thumb-card[data-platform="tiktok"] .social-thumb-wrap {
+  background: linear-gradient(135deg, #010101 0%, #1a1a2e 100%);
+  border: 1px solid rgba(105, 201, 208, 0.25);
+}
+
+.social-thumb-card[data-platform="instagram"] .social-thumb-wrap {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border: 1px solid rgba(225, 48, 108, 0.3);
+}
+
+.social-thumb-card[data-platform="facebook"] .social-thumb-wrap {
+  background: linear-gradient(135deg, #0d1e3d 0%, #1a3a6b 100%);
+  border: 1px solid rgba(24, 119, 242, 0.3);
+}
+
+.social-thumb-card[data-platform="tiktok"]:hover .social-thumb-wrap {
+  border-color: rgba(105, 201, 208, 0.7);
+}
+
+.social-thumb-card[data-platform="instagram"]:hover .social-thumb-wrap {
+  box-shadow: 0 0 0 2px rgba(225, 48, 108, 0.4);
+}
+
+.social-thumb-card[data-platform="facebook"]:hover .social-thumb-wrap {
+  border-color: rgba(24, 119, 242, 0.7);
+}
+
+/* ─── Photo Gallery ─────────────────────────────────────────────────────────── */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.photo-gallery-item {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #262626;
+  background: #0a0a0a;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.photo-gallery-item:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: var(--accent);
+  box-shadow: 0 12px 28px rgba(229, 9, 20, 0.18);
+}
+
+.photo-gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 300ms ease, opacity 200ms ease;
+}
+
+.photo-gallery-item:hover img {
+  transform: scale(1.06);
+  opacity: 0.8;
+}
+
+.photo-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
+  color: white;
+}
+
+.photo-gallery-item:hover .photo-gallery-overlay {
+  opacity: 1;
+}
+
+/* ─── Photo Lightbox ────────────────────────────────────────────────────────── */
+
+.photo-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-lightbox.open {
+  display: flex;
+}
+
+.photo-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.photo-lightbox-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 48px 64px;
+}
+
+.photo-lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  animation: lightboxFadeIn 250ms ease;
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.photo-lightbox-close {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.2rem;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.photo-lightbox-close:hover {
+  background: rgba(229, 9, 20, 0.85);
+  transform: scale(1.1);
+}
+
+.photo-lightbox-nav {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.photo-lightbox-prev {
+  left: 16px;
+}
+
+.photo-lightbox-next {
+  right: 16px;
+}
+
+.photo-lightbox-nav:hover {
+  background: rgba(229, 9, 20, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.photo-lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Photo Gallery Responsive ──────────────────────────────────────────────── */
+
+@media (max-width: 940px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .photo-lightbox-content {
+    padding: 40px 16px;
+  }
+
+  .photo-lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .photo-lightbox-prev {
+    left: 8px;
+  }
+
+  .photo-lightbox-next {
+    right: 8px;
   }
 }
