@@ -5,11 +5,7 @@ const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
-<<<<<<< HEAD
 const storageKey = "portfolioEditorDataV2";
-=======
-const storageKey = "portfolioEditorData";
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
 const dataFile = "portfolio-data.json";
 const editModeEnabled = location.protocol === "file:" || new URLSearchParams(location.search).has("edit");
 const editLauncher = document.querySelector(".edit-launcher");
@@ -117,13 +113,10 @@ function loadSavedData() {
   }
 }
 
-<<<<<<< HEAD
 function loadBundledData() {
   return window.PORTFOLIO_DATA || {};
 }
 
-=======
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
 async function loadPublishedData() {
   try {
     const response = await fetch(dataFile, { cache: "no-store" });
@@ -1029,12 +1022,8 @@ async function initializePortfolio() {
     editLauncher.hidden = true;
   }
 
-<<<<<<< HEAD
   const bundledPortfolioData = loadBundledData();
   publishedPortfolioData = mergeData(bundledPortfolioData, await loadPublishedData());
-=======
-  publishedPortfolioData = await loadPublishedData();
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
   portfolioData = mergeData(
     mergeData(defaultPortfolioData, publishedPortfolioData),
     editModeEnabled ? loadSavedData() : {}

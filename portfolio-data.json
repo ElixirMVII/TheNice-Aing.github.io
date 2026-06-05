@@ -1,10 +1,9 @@
 {
   "site": {
-<<<<<<< HEAD
     "ownerName": "อิงตะวัน ศรีสุข",
     "englishName": "Aingtawan Srisuk",
     "brandSubtitle": "AI Editor / Filmmaker / Content Creator",
-    "heroEyebrow": "Portfolio ",
+    "heroEyebrow": "Portfolio 2026",
     "lead": "ผู้สร้างสรรค์งานภาพยนตร์และสื่อดิจิทัล ที่ทำงานได้ตั้งแต่คิดคอนเทนต์ ถ่ายทำ ตัดต่อ ไปจนถึงการใช้ AI เพื่อยกระดับงานสร้างสรรค์",
     "about": "อิงตะวัน ศรีสุข จบการศึกษาระดับปริญญาตรี วิทยาลัยนิเทศศาสตร์ สาขาภาพยนตร์และสื่อดิจิทัล มหาวิทยาลัยราชภัฏสวนสุนันทา มีประสบการณ์ด้านการผลิตสื่อออนไลน์และโปรดักชันภาพยนตร์มากกว่า 5 ปี ผ่านงานหลากหลายรูปแบบ ตั้งแต่โปรเจกต์ช่องยูทูประดับล้านซับ จนถึงกองถ่ายภาพยนตร์ ในตำแหน่งผู้กำกับ, ผู้ช่วยกำกับ, ผู้กำกับภาพ (DOP), โปรดิวเซอร์, คอนเทนต์ครีเอเตอร์ และตัดต่อวิดีโอ สามารถคิด Content ถ่าย และตัดต่อได้ครบในตัว รวมถึงทำงานในบทบาท AI Editor มีประสบการณ์จริงจากการทำงานเบื้องหลังโปรดักชัน เชี่ยวชาญการผลิตสื่อครบวงจรตั้งแต่ Pre-Production ถึง Post-Production ด้วย Premiere Pro, After Effects และ DaVinci Resolve ผสานการใช้เทคโนโลยี AI ในการสร้างสรรค์ผลงาน พร้อมทักษะการทำงานเป็นทีม เพื่อผลักดันโปรเจกต์ให้สำเร็จตามเป้าหมายด้วยความสมบูรณ์แบบ",
     
@@ -42,48 +41,10 @@
     "btsIntro": "รวมภาพเบื้องหลังการทำงานจากกองถ่ายและโปรดักชันต่าง ๆ",
     "skillsTitle": "Skills",
     "contactTitle": "Contact"
-=======
-    "ownerName": "ชื่อ นามสกุล",
-    "brandSubtitle": "Creative Portfolio",
-    "heroEyebrow": "Portfolio 2026",
-    "lead": "นักสร้างสรรค์งานภาพและสื่อดิจิทัล ที่สนใจงานเล่าเรื่องผ่านภาพ วิดีโอ และประสบการณ์บนหน้าจอ",
-    "about": "รวมผลงานด้านโปรดักชัน วิดีโอ ภาพนิ่ง และดิจิทัลดีไซน์ โดยเน้นการสื่อสารที่ชัดเจน จังหวะภาพที่ดี และงานภาพที่มี mood ตรงกับเรื่องราวของแต่ละโปรเจกต์",
-    "roles": [
-      "Video Editor",
-      "Filmmaker",
-      "UX/UI",
-      "Motion"
-    ],
-    "portraitCaption": "Available for internship / freelance",
-    "footerQuote": "Believe you can and you are halfway there."
-  },
-  "stats": [
-    {
-      "number": "12+",
-      "label": "Selected Works"
-    },
-    {
-      "number": "5",
-      "label": "Core Skills"
-    },
-    {
-      "number": "2026",
-      "label": "Portfolio Update"
-    }
-  ],
-  "sections": {
-    "worksTitle": "ผลงานเด่น",
-    "worksIntro": "รวมผลงานที่คัดมาให้เห็นทั้งแนวคิด บทบาทในโปรเจกต์ และทักษะที่ใช้ในการทำงานจริง",
-    "galleryTitle": "ภาพนิ่งและเบื้องหลัง",
-    "galleryIntro": "พื้นที่สำหรับรวมภาพกองถ่าย ภาพนิ่ง งานรับปริญญา งานอีเวนต์ หรือ gallery จากโปรเจกต์ต่าง ๆ",
-    "skillsTitle": "ทักษะหลัก",
-    "contactTitle": "ติดต่อ"
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
   },
   "works": [
     {
       "image": "assets/project-editorial.png",
-<<<<<<< HEAD
       "kicker": "YouTube / Shooting & Editing",
       "title": "รายการบ้านขังตาย",
       "description": "ผลงานถ่ายและตัดต่อรายการออนไลน์แนวเรื่องเล่าและบรรยากาศลึกลับ",
@@ -363,7 +324,7 @@
         "kicker": "Behind The Scene",
         "title": "เบื้องหลังการทำงาน",
         "description": "โฟลเดอร์รวมภาพเบื้องหลังการทำงาน",
-        
+       
         "links": [
           {
             "label": "เปิดโฟลเดอร์เบื้องหลัง",
@@ -376,7 +337,7 @@
   "skills": [
     {
       "title": "Adobe Premiere Pro",
-    
+      "description": "ตัดต่อวิดีโอ เล่าเรื่องด้วยจังหวะภาพ และจัดการงาน post-production สำหรับคอนเทนต์ออนไลน์",
       "logo": "assets/skill 1.png"
     },
     {
@@ -393,91 +354,11 @@
       "title": "DaVinci Resolve",
       "description": "ปรับสีวิดีโอและดูแลงาน post-production เพื่อให้ภาพมี mood ตามทิศทางของโปรเจกต์",
       "logo": "assets/skill 4.png"
-=======
-      "kicker": "YouTube Editing",
-      "title": "Editorial Cut / Online Content",
-      "description": "งานตัดต่อคอนเทนต์ออนไลน์ จังหวะสนุก กระชับ และวาง narrative ให้คนดูตามเรื่องได้ง่าย",
-      "tags": [
-        "Premiere Pro",
-        "Storytelling",
-        "Sound Design"
-      ],
-      "url": ""
-    },
-    {
-      "image": "assets/project-film.png",
-      "kicker": "Short Film",
-      "title": "หนังสั้น / MV",
-      "description": "งานกำกับ เขียนบท ถ่ายทำ หรือตัดต่อ สำหรับโปรเจกต์ภาพยนตร์สั้นและมิวสิกวิดีโอ",
-      "tags": [
-        "Directing",
-        "DOP",
-        "Editing"
-      ],
-      "url": ""
-    },
-    {
-      "image": "assets/project-brand.png",
-      "kicker": "Brand Story",
-      "title": "Commercial / Brand Video",
-      "description": "คอนเทนต์แนะนำแบรนด์หรือแคมเปญที่เน้นภาพชัด จังหวะดี และ mood สอดคล้องกับตัวตนของงาน",
-      "tags": [
-        "Production",
-        "Color",
-        "Campaign"
-      ],
-      "url": ""
-    },
-    {
-      "image": "assets/project-motion.png",
-      "kicker": "Motion",
-      "title": "Motion Graphic / Title",
-      "description": "งานกราฟิกเคลื่อนไหว ไตเติล อินโทร หรือ visual package สำหรับวิดีโอและสื่อดิจิทัล",
-      "tags": [
-        "After Effects",
-        "Typography",
-        "Visual System"
-      ],
-      "url": ""
-    }
-  ],
-  "gallery": [
-    {
-      "image": "assets/project-bts.png",
-      "alt": "เบื้องหลังการทำงาน 1"
-    },
-    {
-      "image": "assets/project-photo.png",
-      "alt": "ภาพนิ่ง 1"
-    },
-    {
-      "image": "assets/project-brand.png",
-      "alt": "ภาพนิ่ง 2"
-    },
-    {
-      "image": "assets/project-film.png",
-      "alt": "เบื้องหลังการทำงาน 2"
-    }
-  ],
-  "skills": [
-    {
-      "title": "Production",
-      "description": "วางแผนงาน ถ่ายทำ กำกับภาพ คุม mood และจัดการไฟล์สำหรับส่งต่อ post-production"
-    },
-    {
-      "title": "Post-Production",
-      "description": "ตัดต่อ เล่าเรื่องด้วยจังหวะภาพ ปรับสี ทำเสียงเบื้องต้น และ motion graphic"
-    },
-    {
-      "title": "Digital Experience",
-      "description": "ออกแบบหน้าจอ จัดลำดับข้อมูล และทำเว็บ portfolio ที่อ่านง่ายบนมือถือและเดสก์ท็อป"
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
     }
   ],
   "contacts": [
     {
       "label": "Email",
-<<<<<<< HEAD
       "value": "ingtawan18nice@gmail.com",
       "href": "mailto:ingtawan18nice@gmail.com",
       "icon": "fa-solid fa-envelope"
@@ -505,25 +386,6 @@
       "value": "064-795-5723",
       "href": "https://line.me/ti/p/~0647955723",
       "icon": "fa-brands fa-line"
-=======
-      "value": "your.email@example.com",
-      "href": "mailto:your.email@example.com"
-    },
-    {
-      "label": "Phone",
-      "value": "000-000-0000",
-      "href": "tel:0000000000"
-    },
-    {
-      "label": "Instagram",
-      "value": "@yourhandle",
-      "href": "https://www.instagram.com/"
-    },
-    {
-      "label": "LinkedIn",
-      "value": "your-profile",
-      "href": "https://www.linkedin.com/"
->>>>>>> fe797c59330197c3c364c2e4aa7fc4f91fe820d3
     }
   ]
 }
