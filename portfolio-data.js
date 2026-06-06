@@ -57,23 +57,23 @@ window.PORTFOLIO_DATA = {
       ],
       "links": [
         {
-          "label": "บ้านขังตาย 1",
+          "label": "อาถรรพ์อาบอบนวดร้าง 90s EP.1/1 | บ้านขังตาย",
           "url": "https://www.youtube.com/watch?v=SqZaGHbeBoc&t=86s"
         },
         {
-          "label": "บ้านขังตาย 2",
+          "label": "อาถรรพ์อาบอบนวดร้าง 90s EP.1/2 | บ้านขังตาย",
           "url": "https://www.youtube.com/watch?v=U_2RyVQjgz4&t=266s"
         },
         {
-          "label": "บ้านขังตาย 3",
+          "label": "โรงงานร้าง ผีสาวชุดดำ EP.2/1 | บ้านขังตาย",
           "url": "https://www.youtube.com/watch?v=W7AhN8PT5P4&t=29s"
         },
         {
-          "label": "บ้านขังตาย 4",
+          "label": "โรงงานร้าง ผีสาวชุดดำ EP. 2/2 | บ้านขังตาย",
           "url": "https://www.youtube.com/watch?v=-wsAqqp1bvs&t=53s"
         },
         {
-          "label": "บ้านขังตาย 5",
+          "label": "อาถรรพ์คฤหาสน์ร้างซ่อนศพ EP3/1 | บ้านขังตาย",
           "url": "https://youtu.be/SxaaCM6DEL8?si=slyOadpWJ4r2t59g"
         }
       ],
@@ -92,35 +92,35 @@ window.PORTFOLIO_DATA = {
       ],
       "links": [
         {
-          "label": "มูออนไทม์ 1",
+          "label": "เปิดตำนานมู 600 ปี แห่งวัดแม่นางปลื้ม | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/LuT0fwnzSfE?si=ZNNN6fXjFg9xBvlH"
         },
         {
-          "label": "มูออนไทม์ 2",
+          "label": "พิสูจน์ พระอาจารย์แจ้ แรงศรัทธาหรืองมงาย | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/PFjMyotUJqs?si=OO2XMxzHoZaFp3Ie"
         },
         {
-          "label": "มูออนไทม์ 3",
+          "label": "ปริศนา พระพุทธรูปโบราณ อายุ 1,500 ปี | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/jwFI6qN5wM0?si=KZ5BqKFfb-fFMswO"
         },
         {
-          "label": "มูออนไทม์ 4",
+          "label": "เปิดตำนาน “โบสถ์อมฤตโบราณ” | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/0np2wBBeHVc?si=0o-pjiqPUUSJhLAf"
         },
         {
-          "label": "มูออนไทม์ 5",
+          "label": "ขอพรตะเคียนยักษ์ 1,000 ปี โบสถ์มหาอุตม์ แห่งกรุงรัตนโกสินทร์ | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/-b6ZHHpA7Uc?si=8bEkZ-UNxdXqPT0X"
         },
         {
-          "label": "มูออนไทม์ 6",
+          "label": "เปิดตำนานท้าวเวสสุวรรณ แห่งขุนเขาดงพญาไฟ | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/mJxYNMrUJfc?si=Z9jxw6vXh6pzCEHL"
         },
         {
-          "label": "มูออนไทม์ 7",
+          "label": "เปิดตำนานพระแม่โสมา | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/w9TtOOgJq0A?si=QL33skUZvWge0QPq"
         },
         {
-          "label": "มูออนไทม์ 8",
+          "label": "เมืองลับแลใต้พิภพ เปิดตำนานหลวงพ่อดำ | มูออนไทม์ MU ON TIME",
           "url": "https://youtu.be/B0XLT6ZfE80?si=jEwuLcfV0RKUetC1"
         }
       ]
