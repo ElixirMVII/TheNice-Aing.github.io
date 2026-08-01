@@ -482,6 +482,9 @@ function createVideoThumbCard(link) {
 
 // ─── Works section: grouped by show ─────────────────────────────────────────
 
+const collapsedThumbLimit = 6;
+const collapsibleThumbThreshold = 8;
+
 function renderWorksSection(works, gridSelector) {
   const grid = document.querySelector(gridSelector || "#works .work-grid");
   if (!grid) return;
@@ -536,17 +539,47 @@ function renderWorksSection(works, gridSelector) {
     const thumbGrid = document.createElement("div");
     thumbGrid.className = "yt-thumb-grid";
 
-    youtubeLinks.forEach((link) => {
-      const card = createVideoThumbCard(link);
-      if (card) thumbGrid.appendChild(card);
-    });
+    const thumbCards = [
+      ...youtubeLinks.map(createVideoThumbCard).filter(Boolean),
+      ...socialLinks.map(createSocialLinkCard).filter(Boolean),
+    ];
+    thumbGrid.replaceChildren(...thumbCards);
 
-    socialLinks.forEach((link) => {
-      const card = createSocialLinkCard(link);
-      if (card) thumbGrid.appendChild(card);
-    });
+    if (thumbCards.length > collapsibleThumbThreshold) {
+      const toggle = document.createElement("button");
+      toggle.className = "yt-show-toggle";
+      toggle.type = "button";
+      toggle.setAttribute("aria-expanded", "false");
 
-    block.append(header, thumbGrid);
+      const icon = document.createElement("i");
+      icon.className = "fa-solid fa-chevron-down";
+      icon.setAttribute("aria-hidden", "true");
+
+      const label = document.createElement("span");
+
+      const updateToggle = () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        thumbCards.forEach((card, index) => {
+          card.hidden = !isExpanded && index >= collapsedThumbLimit;
+        });
+        label.textContent = isExpanded
+          ? "\u0e41\u0e2a\u0e14\u0e07\u0e19\u0e49\u0e2d\u0e22\u0e25\u0e07"
+          : "\u0e41\u0e2a\u0e14\u0e07\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14";
+        icon.className = `fa-solid ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"}`;
+      };
+
+      toggle.append(icon, label);
+      toggle.addEventListener("click", () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+        updateToggle();
+      });
+      updateToggle();
+
+      block.append(header, thumbGrid, toggle);
+    } else {
+      block.append(header, thumbGrid);
+    }
     grid.appendChild(block);
   });
 }
